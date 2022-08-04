@@ -15,42 +15,42 @@ print('')
 import random
 
 
-# destinations= ['Miami', 'Mexico', 'Milwaukee'] 
-# print(f'{user_name}, lets figure out where youll be staying!' )
+destinations= ['Miami', 'Mexico', 'Milwaukee'] 
+print(f'{user_name}, lets figure out where youll be staying!' )
 
-# def random_dest():
-#     user_validator= False   # Still not 100% on how and where to use & why False
-#     while user_validator is False: 
+def random_dest():
+    user_validator= False   # Still not 100% on how and where to use & why False
+    while user_validator is False: 
 
-#         dest_item= random.choice(destinations)
-#         does_user_like= input(f'{dest_item} has been selected, do you like this option? yes or no: ')
-#         if does_user_like== "yes":
-#             print(f'Great, you will love it in {dest_item}! ')
-#             return dest_item    # Need to understand a little better
-#         elif does_user_like== "no":
-#             print('Okay, lets try again! ')
+        dest_item= random.choice(destinations)
+        does_user_like= input(f'{dest_item} has been selected, do you like this option? yes or no: ')
+        if does_user_like== "yes":
+            print(f'Great, you will love it in {dest_item}! ')
+            return dest_item    # Need to understand a little better
+        elif does_user_like== "no":
+            print('Okay, lets try again! ')
         
-# confirmed_dest= random_dest()  # confirmed_dest is created so the outcome of this function (random_dest) can be used later   
+confirmed_dest= random_dest()  # confirmed_dest is created so the outcome of this function (random_dest) can be used later   
 
 
 
-# transport_list= ['Rental Car', 'Helicopter', 'Airplane']
-# print(f'{user_name}, now lets figure out your mode of transportation! ')
+transport_list= ['Rental Car', 'Helicopter', 'Airplane']
+print(f'{user_name}, now lets figure out your mode of transportation! ')
 
-# def random_transport():
-#     user_validator= False
-#     while user_validator is False:
+def random_transport():
+    user_validator= False
+    while user_validator is False:
         
-#         trans_item= random.choice(transport_list)
-#         does_user_like= input(f'{trans_item} has been selected, do you like this option? yes or no: ')
-#         if does_user_like== "yes":
-#             print(f'Great! {trans_item} will get you from point A to point B just fine! ')
-#             return trans_item
-#         elif does_user_like== "no":
-#             print('Okay, lets try again! ')
+        trans_item= random.choice(transport_list)
+        does_user_like= input(f'{trans_item} has been selected, do you like this option? yes or no: ')
+        if does_user_like== "yes":
+            print(f'Great! {trans_item} will get you from point A to point B just fine! ')
+            return trans_item
+        elif does_user_like== "no":
+            print('Okay, lets try again! ')
 
         
-# confirmed_trans= random_transport()
+confirmed_trans= random_transport()
 
 
 
@@ -94,9 +94,20 @@ def random_ent():
 confirmed_ent= random_ent()
 
 
-def finalize_trip
-    
-print(f'lets')
+print(f'{user_name}, now that you have accepted all parts of trip, lets confirm one last time! ')
+
+def finalized_trip():
+    compiled_trip= (f'You chose {confirmed_dest}, {confirmed_trans}, {confirmed_rest}, {confirmed_ent}')
+    print(compiled_trip)
+    user_finalized= input('Type complete if this looks good')
+    if user_finalized== 'complete':
+        print(f'Thank you {user_name} for using the day trip generator! Have a fantastic time!')
+        return finalized_trip
+
+finalized_trip()
+
+
+
 
         
 
@@ -109,16 +120,11 @@ print(f'lets')
 
 
 
-# TODO: Make list for destinations, restaraunt, transport, entertainment
-# TODO: Try introducing RANDOM into IF,ELIF,ELSE conditional ??
+# TODO: create function that will allow user to input "complete" and the output to terminal is each confirmed_"values"
 # TODO: 
-# TODO: Craete a FUNCTION (def) for each list
+# TODO: 
         # Identify what my parameters will be and how function will recall the randomizer again 
 # TODO: Randomly select all variables:
-    # Allow user to randomize singular value at a time (e.g re-randomize ONLY transportation and nothing else)
-    # Take list-Get Length
-    # Take Length and generate random number
-    # Get value from list from random number
-# TODO: Re-select if user doesnt like option
-    # Get user input ('yes' or 'no')
-    
+
+
+
