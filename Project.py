@@ -99,7 +99,7 @@ print(f'{user_name}, now that you have accepted all parts of trip, lets confirm 
 def finalized_trip():
     compiled_trip= (f'You chose {confirmed_dest}, {confirmed_trans}, {confirmed_rest}, {confirmed_ent}')
     print(compiled_trip)
-    user_finalized= input('Type complete if this looks good')
+    user_finalized= input('Type complete if this looks good: ')
     if user_finalized== 'complete':
         print(f'Thank you {user_name} for using the day trip generator! Have a fantastic time!')
         return finalized_trip
