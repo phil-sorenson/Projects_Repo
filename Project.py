@@ -15,27 +15,45 @@ print('')
 import random
 
 
-destinations= ['Miami', 'Mexico', 'Milwaukee'] 
+# destinations= ['Miami', 'Mexico', 'Milwaukee'] 
+# print(f'{user_name}, lets figure out where youll be staying!' )
 
-def random_dest():
-    user_validater= False   # Still not 100% on how and where to use & why False
-    while user_validater is False: 
+# def random_dest():
+#     user_validator= False   # Still not 100% on how and where to use & why False
+#     while user_validator is False: 
 
-        dest_item= random.choice(destinations)
-        does_user_like= input(f'{dest_item} has been selected, do you like this option? yes or no: ')
-        if does_user_like== "yes":
-            print(f'Great, you will love it in {dest_item}! ')
-            return dest_item    # Need to understand a little better
-        elif does_user_like== "no":
-            print('Okay, lets try again! ')
+#         dest_item= random.choice(destinations)
+#         does_user_like= input(f'{dest_item} has been selected, do you like this option? yes or no: ')
+#         if does_user_like== "yes":
+#             print(f'Great, you will love it in {dest_item}! ')
+#             return dest_item    # Need to understand a little better
+#         elif does_user_like== "no":
+#             print('Okay, lets try again! ')
         
-confirmed_dest= random_dest()  # confirmed_dest is created so the outcome of this function (random_dest) can be used later   
+# confirmed_dest= random_dest()  # confirmed_dest is created so the outcome of this function (random_dest) can be used later   
 
 
 
 transport_list= ['Rental Car', 'Helicopter', 'Airplane']
-random_transport= random.choice(transport_list)
-print(random_transport)
+print(f'{user_name}, now lets figure out your mode of transportation! ')
+
+def random_transport():
+    user_validator= False
+    while user_validator is False:
+        
+        trans_item= random.choice(transport_list)
+        does_user_like= input(f'{trans_item} has been selected, do you like this option? yes or no: ')
+        if does_user_like== "yes":
+            print(f'Great! {trans_item} will get you from point A to point B just fine! ')
+            return trans_item
+        elif does_user_like== "no":
+            print('Okay, lets try again! ')
+
+        
+confirmed_trans= random_transport()
+
+
+
 
 restaraunt_list= ['Mexican', 'French', 'Chinese']
 random_restaraunt= random.choice(restaraunt_list)
