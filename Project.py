@@ -34,34 +34,75 @@ import random
 
 
 
-transport_list= ['Rental Car', 'Helicopter', 'Airplane']
-print(f'{user_name}, now lets figure out your mode of transportation! ')
+# transport_list= ['Rental Car', 'Helicopter', 'Airplane']
+# print(f'{user_name}, now lets figure out your mode of transportation! ')
 
-def random_transport():
-    user_validator= False
-    while user_validator is False:
+# def random_transport():
+#     user_validator= False
+#     while user_validator is False:
         
-        trans_item= random.choice(transport_list)
-        does_user_like= input(f'{trans_item} has been selected, do you like this option? yes or no: ')
-        if does_user_like== "yes":
-            print(f'Great! {trans_item} will get you from point A to point B just fine! ')
-            return trans_item
-        elif does_user_like== "no":
-            print('Okay, lets try again! ')
+#         trans_item= random.choice(transport_list)
+#         does_user_like= input(f'{trans_item} has been selected, do you like this option? yes or no: ')
+#         if does_user_like== "yes":
+#             print(f'Great! {trans_item} will get you from point A to point B just fine! ')
+#             return trans_item
+#         elif does_user_like== "no":
+#             print('Okay, lets try again! ')
 
         
-confirmed_trans= random_transport()
+# confirmed_trans= random_transport()
 
 
 
 
 restaraunt_list= ['Mexican', 'French', 'Chinese']
-random_restaraunt= random.choice(restaraunt_list)
-print(random_restaraunt)
+print(f'{user_name}, now lets see what youll be eating!')
+
+def random_rest():
+    user_validator= False
+    while user_validator is False:
+        
+        rest_item= random.choice(restaraunt_list)
+        does_user_like= input(f'{rest_item}, has been selected, do you like this option? yes or no: ')
+        if does_user_like== "yes":
+            print(f'Great! {rest_item} sounds delicious! ')
+            return rest_item
+        elif does_user_like== "no":
+            print('Okay, lets try again! ')
+    
+
+confirmed_rest= random_rest()
+
+
+
 
 entertainment_list= ['Movie Theater', 'Sky Diving', 'Go Karts']
-random_ent= random.choice(entertainment_list)
-print(random_ent)
+print(f'{user_name}, and lastly, lets see what youll be doing on your trip!')
+
+def random_ent():
+    user_validation= False
+    while user_validation is False: 
+        
+        ent_item= random.choice(entertainment_list)
+        does_user_like= input(f'{ent_item} has been chosen, do you like this option? yes or no: ')
+        if does_user_like== 'yes':
+            print(f'Great! {ent_item} should be a good time!')
+            return ent_item
+        elif does_user_like== 'no':
+            print('Okay, lets try again!')
+
+confirmed_ent= random_ent()
+
+
+def finalize_trip
+    
+print(f'lets')
+
+        
+
+
+
+
 
 
 # QUESTION for meeting: Take me through the process of working on project via VScode and updating gitHub/gitHub bash seamlessly
