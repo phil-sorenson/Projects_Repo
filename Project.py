@@ -7,16 +7,22 @@
     # (10 points): As user, I want to display a completed trip in the console/terminal
     # (5 points): As developer, I want all of my functions to have a SINGLE RESPONSIBILITY. **REMEMBER, each function should do just ONE THING!**
 
-print('')
-user_name= input('Please Enter Your Name: ')
-print(f'Hello {user_name} I am your Trip Generator!')
-print('')
+# Feedback TODO: Create a function w/ all the function variables (confirmed_dest, confirmed_trans, etc) in order to run all functions over again in case user wanted to
+
 
 import random
 
 
+def welcome_message():         # FEEDBACK
+    print('')
+    user_name= input('Please Enter Your Name: ')
+    print(f'Hello {user_name} I am your Trip Generator!')
+    print('')
+    print(f'{user_name}, lets figure out where youll be staying!' )   # Or "return user_name" would work as well 
+    
+user_name= welcome_message()    # So the user_name is available throughout code
+
 destinations= ['Miami', 'Mexico', 'Milwaukee'] 
-print(f'{user_name}, lets figure out where youll be staying!' )
 
 def random_dest():
     user_validator= False   # Still not 100% on how and where to use & why False
@@ -30,12 +36,11 @@ def random_dest():
         elif does_user_like== "no":
             print('Okay, lets try again! ')
         
-confirmed_dest= random_dest()  # confirmed_dest is created so the outcome of this function (random_dest) can be used later   
 
 
 
 transport_list= ['Rental Car', 'Helicopter', 'Airplane']
-print(f'{user_name}, now lets figure out your mode of transportation! ')
+#print(f'{user_name}, now lets figure out your mode of transportation! ')
 
 def random_transport():
     user_validator= False
@@ -50,13 +55,12 @@ def random_transport():
             print('Okay, lets try again! ')
 
         
-confirmed_trans= random_transport()
 
 
 
 
 restaraunt_list= ['Mexican', 'French', 'Chinese']
-print(f'{user_name}, now lets see what youll be eating!')
+#print(f'{user_name}, now lets see what youll be eating!')
 
 def random_rest():
     user_validator= False
@@ -71,13 +75,12 @@ def random_rest():
             print('Okay, lets try again! ')
     
 
-confirmed_rest= random_rest()
 
 
 
 
 entertainment_list= ['Movie Theater', 'Sky Diving', 'Go Karts']
-print(f'{user_name}, and lastly, lets see what youll be doing on your trip!')
+#print(f'{user_name}, and lastly, lets see what youll be doing on your trip!')
 
 def random_ent():
     user_validation= False
@@ -91,20 +94,29 @@ def random_ent():
         elif does_user_like== 'no':
             print('Okay, lets try again!')
 
-confirmed_ent= random_ent()
 
 
-print(f'{user_name}, now that you have accepted all parts of trip, lets confirm one last time! ')
+#print(f'{user_name}, now that you have accepted all parts of trip, lets confirm one last time! ')
 
-def finalized_trip():
+def finalized_trip(user_name,confirmed_dest,confirmed_trans,confirmed_rest,confirmed_ent):   # FEEDBACK-- Put in parameters so they can be used in "Master Function"
     compiled_trip= (f'You chose {confirmed_dest}, {confirmed_trans}, {confirmed_rest}, {confirmed_ent}')
     print(compiled_trip)
     user_finalized= input('Type complete if this looks good: ')
     if user_finalized== 'complete':
         print(f'Thank you {user_name} for using the day trip generator! Have a fantastic time!')
-        return finalized_trip
+    else: 
+        day_trip_generator()
 
-finalized_trip()
+
+def day_trip_generator():        # FEEDBACK-- Master Function so if used wants to re-run program they can
+    user_name= welcome_message()
+    confirmed_dest= random_dest()
+    confirmed_trans= random_transport()
+    confirmed_rest= random_rest()
+    confirmed_ent= random_ent()
+    finalized_trip(user_name,confirmed_dest,confirmed_trans,confirmed_rest,confirmed_ent)   # FEEDBACK
+
+day_trip_generator()
 
 
 
