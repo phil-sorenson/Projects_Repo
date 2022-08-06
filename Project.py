@@ -103,7 +103,7 @@ def finalized_trip(user_name,confirmed_dest,confirmed_trans,confirmed_rest,confi
     print(compiled_trip)
     user_finalized= input('Type complete if this looks good: ')
     if user_finalized== 'complete':
-        print(f'Thank you {user_name} for using the day trip generator! Have a fantastic time!')
+        print(f'Thank you {user_name} for using the day trip generator! Have a fantastic time!') ## ?? How do I call back the user_name so it doesnt come back as "Thank you NONE"
     else: 
         day_trip_generator()
 
